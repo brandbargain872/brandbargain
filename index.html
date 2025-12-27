@@ -1,217 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- force rebuild -->
 <head>
-<style>
-  body {
-    margin: 0;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-    background: #f5efe6;
-    color: #111;
-  }
+  <meta charset="UTF-8">
+  <title>Brand Bargain</title>
 
-  .products {
-    display: flex;
-    justify-content: center;
-    margin-top: 80px;
-    padding-bottom: 80px;
-  }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
 
-  .product-card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 28px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  }
+    h2 {
+      text-align: center;
+      margin-top: 40px;
+    }
 
-  .product-card img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 18px;
-  }
+    .products {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
 
-  .product-card h3 {
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 8px;
-    letter-spacing: 0.2px;
-  }
+    .product-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
 
-  .price {
-    font-size: 17px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
+    .product-img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
 
-  .buy-btn {
-  background: #3b2f2f;
-  color: #ffffff !important;
-  text-decoration: none;
-  border: none;
-  padding: 12px 22px;
-  border-radius: 8px;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  display: inline-block;
-  transition: all 0.25s ease;
-}
+    .price {
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
 
-.buy-btn:hover {
-  background: #2a1f1f;
-  color: #ffffff;
-}
+    .buy-btn {
+      background: #3b2f2f;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 12px 22px;
+      border-radius: 8px;
+      display: inline-block;
+      transition: all 0.25s ease;
+    }
 
-</style>
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrandBargain Haven | Authentic Brands, Unbeatable Prices</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="components/navbar.js"></script>
-    <script src="components/footer.js"></script>
-    <script src="components/product-card.js"></script>
-    <script src="components/contact-form.js"></script>
+    .buy-btn:hover {
+      background: #2a1f1f;
+    }
+  </style>
 </head>
-<body class="bg-gray-50">
-    <custom-navbar></custom-navbar>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Hero Section -->
-        <section class="py-12 md:py-20">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Authentic Brands.<br>Unbeatable Prices.</h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                    We source authentic branded products directly to bring you premium quality at prices that make sense.
-                    No middlemen. Just great deals.
-                </p>
-                <a href="#products" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-8 rounded-lg shadow-md transition duration-300">
-                    Shop Now
-                </a>
-            </div>
-        </section>
+<body>
 
-        <!-- Trust Badges -->
-        <section class="py-8 bg-white rounded-xl shadow-sm mb-12">
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                <div class="flex items-center">
-                    <i data-feather="check-circle" class="text-green-500 mr-2"></i>
-                    <span class="text-gray-700">100% Authentic Products</span>
-                </div>
-                <div class="flex items-center">
-                    <i data-feather="truck" class="text-indigo-500 mr-2"></i>
-                    <span class="text-gray-700">Fast & Free Shipping</span>
-                </div>
-                <div class="flex items-center">
-                    <i data-feather="shield" class="text-blue-500 mr-2"></i>
-                    <span class="text-gray-700">Secure Checkout</span>
-                </div>
-            </div>
-        </section>
+<h2>Our Products</h2>
 
-        <!-- Search & Filter -->
-        <section id="products" class="mb-16">
-            <div class="bg-white p-6 rounded-xl shadow-sm">
-                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
-                    <h2 class="text-2xl font-bold text-gray-900">Our Products</h2>
-                    <div class="relative w-full md:w-96">
-                        <input type="text" placeholder="Search products..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500">
-                        <i data-feather="search" class="absolute left-3 top-2.5 text-gray-400"></i>
-                    </div>
-                </div>
-                
-                <div class="flex flex-wrap gap-4 mb-6">
-                    <button class="filter-btn active px-4 py-2 bg-indigo-600 text-white rounded-lg">All</button>
-                    <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Tech</button>
-                    <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Shoes</button>
-                    <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Clothes</button>
-                    <button class="filter-btn px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300">Accessories</button>
-                </div>
-
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="product-grid">
-                    <!-- Product cards will be inserted here by JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section class="mb-16">
-            <div class="bg-white p-8 rounded-xl shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6">Why Choose Us?</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="flex flex-col items-center text-center">
-                        <div class="bg-indigo-100 p-4 rounded-full mb-4">
-                            <i data-feather="dollar-sign" class="text-indigo-600 w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold mb-2">Direct Savings</h3>
-                        <p class="text-gray-600">We cut out the middlemen to bring you authentic products at prices up to 40% below retail.</p>
-                    </div>
-                    <div class="flex flex-col items-center text-center">
-                        <div class="bg-indigo-100 p-4 rounded-full mb-4">
-                            <i data-feather="check" class="text-indigo-600 w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold mb-2">Authenticity Guaranteed</h3>
-                        <p class="text-gray-600">Every product is carefully vetted to ensure you receive genuine branded items.</p>
-                    </div>
-                    <div class="flex flex-col items-center text-center">
-                        <div class="bg-indigo-100 p-4 rounded-full mb-4">
-                            <i data-feather="heart" class="text-indigo-600 w-8 h-8"></i>
-                        </div>
-                        <h3 class="text-lg font-semibold mb-2">Customer First</h3>
-                        <p class="text-gray-600">Your satisfaction is our priority with a simple and safe website.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="mb-16">
-            <custom-contact-form></custom-contact-form>
-        </section>
-    </main>
-
-    <custom-footer></custom-footer>
-
-    <script src="script.js"></script>
-    <script>
-        feather.replace();
-        // Load products
-        document.addEventListener('DOMContentLoaded', function() {
-            loadProducts();
-        });
-    </script>
-
-<h2 style="text-align:center;">Our Products</h2>
-
- <div class="products">
+<div class="products">
   <div class="product-card">
-    <img src="product1.jpg" alt="Luxury Item 1" class="product-img">
+    <img src="product1.jpg" alt="TRAPSTAR tracksuit" class="product-img">
     <h3>TRAPSTAR tracksuit</h3>
     <p class="price">€186</p>
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=brandbargain.orders@gmail.com
-&su=Order%20Inquiry%20-%20Luxury%20Item%201&body=Hello,%0A%0AI%20am%20interested%20in%20trapstar%20tracksuit%0A%0APlease%20contact%20me%20with%20more%20details.%0A%0AThank%20you."
-   target="_blank"
-   class="buy-btn"
-   style="text-decoration:none; display:inline-block;">
-  For details
-</a>
+
+    <a
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=brandbargain.orders@gmail.com&su=Order%20Inquiry%20-%20TRAPSTAR%20tracksuit&body=Hello,%0A%0AI%20am%20interested%20in%20the%20TRAPSTAR%20tracksuit.%0A%0APlease%20contact%20me%20with%20more%20details.%0A%0AThank%20you."
+      target="_blank"
+      class="buy-btn"
+    >
+      For details
+    </a>
   </div>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
