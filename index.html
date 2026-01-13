@@ -1,16 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Brand Bargain</title>
 
   <style>
-    .section {
-  max-width: 300px;
-  margin: 40px auto;
-  text-align: center;
-}
-
     body {
       font-family: Arial, sans-serif;
       background: #f2f2f2;
@@ -18,27 +12,24 @@
       padding: 0;
     }
 
-    h2 {
+    .container {
+      max-width: 320px;
+      margin: 0 auto;
       text-align: center;
-      margin-top: 40px;
     }
 
-    .products {
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
+    h2 {
+      margin: 40px 0 20px;
     }
 
     .product-card {
       background: #ffffff;
-      border-radius: 12px;
       padding: 20px;
-      width: 280px;
-      text-align: center;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
 
-    .product-img {
+    .product-card img {
       width: 100%;
       border-radius: 10px;
       margin-bottom: 15px;
@@ -47,56 +38,34 @@
     .price {
       font-weight: bold;
       font-size: 18px;
-      margin-bottom: 15px;
+      margin: 10px 0 20px;
     }
 
-    .buy-btn {
+    .btn {
+      display: inline-block;
       background: #3b2f2f;
       color: #ffffff;
-      text-decoration: none;
-      padding: 12px 22px;
+      padding: 12px 20px;
       border-radius: 8px;
-      display: inline-block;
-      transition: all 0.25s ease;
-    }
-
-    .buy-btn:hover {
-      background: #2a1f1f;
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
 
-<h2>Our Products</h2>
+<div class="container">
 
-<div class="products">
-  <div class="section">
-
-  <h3>About Us</h3>
-  <p>
-    We provide high-quality luxury items from premium brands,
-    sourced through trusted partners and offered in a more
-    accessible way.
-  </p>
-</div>
+  <h2>Our Products</h2>
 
   <div class="product-card">
-    <img src="product1.jpg" alt="TRAPSTAR tracksuit" class="product-img">
+    <img src="product1.jpg" alt="TRAPSTAR tracksuit">
     <h3>TRAPSTAR tracksuit</h3>
     <p class="price">€186</p>
-
-    <a
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=brandbargain.orders@gmail.com&su=Order%20Inquiry%20-%20TRAPSTAR%20tracksuit&body=Hello,%0A%0AI%20am%20interested%20in%20the%20TRAPSTAR%20tracksuit.%0A%0APlease%20contact%20me%20with%20more%20details.%0A%0AThank%20you."
-      target="_blank"
-      class="buy-btn"
-    >
-      For details
-    </a>
+    <a class="btn" href="#">For details</a>
   </div>
+
 </div>
 
 </body>
 </html>
-
-
